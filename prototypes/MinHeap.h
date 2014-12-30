@@ -5,15 +5,15 @@
 
 /*--------begin.min_heap.structures---------*/
 typedef struct MinHeapNode {
-	int  v;			// numarul de noduri
-	int key;		// valaoarea nodului
+	int  v;			// number of vertices
+	int key;		// key value of a vertex
 } MinHeapNode;
 
 
 typedef struct MinHeap {
-	int size;				// nr  curent noduri heap,
-	int capacity;		    // capacitatea heap-ului
-	int *pos;				// pozitia nodului necesara pt functia decresing key
+	int size;				// actual number of nodes from min_heap,
+	int capacity;				// capacity of min_heap
+	int *pos;				
 	struct MinHeapNode **array;
 } MinHeap;
 /*--------end.min_heap.structures----------*/
