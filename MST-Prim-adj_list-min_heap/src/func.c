@@ -143,11 +143,11 @@ int isInMinHeap(MinHeap *minHeap, int v)
 void printSol(int arr[], int n,int m[])
 {
 	int x=0;
-	printf("\nMUCHIILE CONTINUTE IN ARBORELE MINIM DE ACOPERIRE:\n\n");
+	printf("\nEDGE CONTAINED IN THE MINIMUM SPANNING TREE:\n\n");
 	for (int i = 1; i <n; ++i) 
 	{
-		printf("Muchia %d <---> %d cu costul %d\n", arr[i], i, m[i]);
+		printf("Edge %d <---> %d with cost %d\n", arr[i], i, m[i]);
 		x += m[i];
 	}
-	printf("\nCostul total al arborelui minim de acoperire este:%d\n",x);
+	printf("\nThe total cost of minimum spanning tree:%d\n",x);
 }
