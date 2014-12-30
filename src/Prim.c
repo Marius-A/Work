@@ -4,9 +4,9 @@
 
 void PrimMST(Graph* graph) 
 {
-	int V = graph->V;		 // nr de noduri din graf
-	int parent[nr_vertex];   // vector in care se stocheaza AMA
-	int key[nr_vertex];      // cheie utilizata pentru a selecta muchia cu pret minim
+	int V = graph->V;		
+	int parent[nr_vertex];
+	int key[nr_vertex];    
 
 	MinHeap* minHeap = createMinHeap(V);
 
