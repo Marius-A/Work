@@ -7,7 +7,7 @@ int main()
 	int k, src, dst, cost, cnx, V;
 	FILE *f;
 
-	f = fopen("list.txt", "r+");
+	f = fopen("imput.in", "r+");
 
 	fscanf(f, "%d", &V);
 	Graph* graph = createGraph(V);
