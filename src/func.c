@@ -1,7 +1,7 @@
 ﻿#include "graph.h"
 #include "MinHeap.h"
 
-/* Creaza un nou nod in lista de adiacenta*/
+/* Create a new node in the adjacency list*/
 ListNode* newListNode(int dest, int weight) {
 	ListNode* newNode = (ListNode*)malloc(sizeof(ListNode));
 	newNode->dest = dest;
@@ -10,7 +10,7 @@ ListNode* newListNode(int dest, int weight) {
 	return newNode;
 }
 
-/* Creaza un graf cu V noduri*/
+/* Create a graph with V vertices*/
 Graph* createGraph(int V) {
 	Graph* graph = (Graph*)malloc(sizeof(Graph));
 	graph->V = V;
@@ -22,7 +22,7 @@ Graph* createGraph(int V) {
 	return graph;
 }
 
-/* Adauga o muchie la un graf*/
+/* Add an edge to a graph*/
 void addEdge(Graph*  graph, int src, int dest, int weight) 
 {
 	ListNode* newNode = newListNode(dest, weight);
@@ -33,7 +33,7 @@ void addEdge(Graph*  graph, int src, int dest, int weight)
 	graph->array[dest].head = newNode;
 }
 
-/*Creaza un nod in min_heap*/
+/*Create e new node in min_heap*/
 MinHeapNode *newMinHeapNode(int v, int key) 
 {
 	MinHeapNode* minHeapNode = (MinHeapNode*)malloc(sizeof(MinHeapNode));
@@ -42,7 +42,7 @@ MinHeapNode *newMinHeapNode(int v, int key)
 	return minHeapNode;
 }
 
-/* Creaza un Min Heap*/
+/* Create a new Min Heap*/
 MinHeap *createMinHeap(int capacity)
 {
 	MinHeap* minHeap = (MinHeap*)malloc(sizeof(MinHeap));
@@ -53,7 +53,7 @@ MinHeap *createMinHeap(int capacity)
 	return minHeap;
 }
 
-/*Interschimba doua noduri din min heap*/
+/*Exchange 2 nodes from min heap*/
 void swapMinHeapNode(MinHeapNode** a, MinHeapNode** b) 
 {
 	MinHeapNode* t = *a;
@@ -61,7 +61,7 @@ void swapMinHeapNode(MinHeapNode** a, MinHeapNode** b)
 	*b = t;
 }
 
-/*Pastreaza proprietatea de minheap a structurii*/
+/*Keep the properties of min heap structure*/
 void minHeapify(MinHeap* minHeap, int idx) 
 {
 	int smallest, left, right;
@@ -112,8 +112,6 @@ MinHeapNode* extractMin(MinHeap* minHeap)
 	return root;
 }
 
-/* Functie utilizata pentru a reduce valoarea key a unui anumit nod v. 
-	Această functie utilizeaza poz [] min-heap-ului pentru a obtine indicele actual al nodului in min heap*/
 void decreaseKey(MinHeap* minHeap, int v, int key)
 {
 	int i = minHeap->pos[v];
@@ -128,7 +126,7 @@ void decreaseKey(MinHeap* minHeap, int v, int key)
 	}
 }
 
-/* Verifica daca un anumit nod "v" este in min heap sau nu*/
+/* Check if a particular node v is in min heap or not*/
 int isInMinHeap(MinHeap *minHeap, int v)
 {
 	if (minHeap->pos[v] < minHeap->size)
@@ -141,7 +139,7 @@ int isInMinHeap(MinHeap *minHeap, int v)
 	}
 }
 
-/* Tipareste arborele minim de acoperire.*/
+/* Print the minimum spanning tree.*/
 void printSol(int arr[], int n,int m[])
 {
 	int x=0;
