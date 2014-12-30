@@ -23,8 +23,8 @@ typedef struct AdjList {
 
 /*--------begin.graph.structures---------*/
 typedef struct Graph {
-	int V;						 // numarul de noduri din graf
-	struct AdjList* array;		 // graful este vazut ca un vector de liste de adiacenta
+	int V;						 // number of vertices
+	struct AdjList* array;		 		// the graph can be seen as a array of adjacency lists
 } Graph;
 /*--------end.graph.structures----------*/
 
