@@ -12,7 +12,7 @@ int main()
 	fscanf(f, "%d", &V);
 	Graph* graph = createGraph(V);
 
-	fscanf(f, "%d", &cnx);/*nr conexiuni , muchii*/
+	fscanf(f, "%d", &cnx);				/*number of conexions (edges)*/
 
 	for (k = 0; k <cnx; k++)
 	{
