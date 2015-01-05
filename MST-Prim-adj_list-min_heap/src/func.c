@@ -2,7 +2,8 @@
 #include "MinHeap.h"
 
 /* Create a new node in the adjacency list*/
-ListNode* newListNode(int dest, int weight) {
+ListNode* newListNode(int dest, int weight)
+{
 	ListNode* newNode = (ListNode*)malloc(sizeof(ListNode));
 	newNode->dest = dest;
 	newNode->weight = weight;
@@ -11,7 +12,8 @@ ListNode* newListNode(int dest, int weight) {
 }
 
 /* Create a graph with V vertices*/
-Graph* createGraph(int V) {
+Graph* createGraph(int V)
+{
 	Graph* graph = (Graph*)malloc(sizeof(Graph));
 	graph->V = V;
 	graph->array = (AdjList*)malloc(V * sizeof(AdjList));
